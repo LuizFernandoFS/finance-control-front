@@ -1,0 +1,21 @@
+.header { 
+    width: 100vw;
+    height: 10vh;
+    justify-content: center;
+    background-color: #C9CBC3;
+}
+
+span {
+    display: flex;
+    align-items: center;
+    font-family: 'Poppins', sans-serif;
+    font-size: 28px;
+    font-weight: 600;
+}
+
+i {
+    margin-left: 5px;
+    margin-bottom: 7px;
+    display: flex;
+    align-items: center;
+}
