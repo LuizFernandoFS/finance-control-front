@@ -1,6 +1,23 @@
-.table {
-    margin-top: 5rem;
-    width: 100vw;
-    height: 50vh;
+* {
+    font-family: 'Poppins';
+}
 
+.table {
+    width: 100%;
+}
+
+.card-saldo {
+    width: 10vw;
+    height: 2vh;
+    margin: 10px;
+}
+
+.valor-negativo {
+    color: #ca1e0e;
+    font-weight: bold;
+}
+
+.valor-positivo {
+    color: #3aa032;
+    font-weight: bold;
 }
