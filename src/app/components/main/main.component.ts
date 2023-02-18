@@ -10,7 +10,7 @@ import { RegistroService } from 'src/app/services/registro.service';
 export class MainComponent implements OnInit {
 
   registros: Registro[] = [];
-  displayedColumns: string[] = ['id', 'descricao', 'valor', 'tipoRegistro']
+  displayedColumns: string[] = ['id', 'descricao', 'valor', 'tipoRegistro', 'dataRegistro']
 
   constructor(private service: RegistroService) { }
 
