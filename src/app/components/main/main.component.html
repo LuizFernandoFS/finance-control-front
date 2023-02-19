@@ -1,6 +1,6 @@
-<mat-card class="card-saldo">
+<mat-card id="painel-saldo">
     <mat-card-content [ngClass]="saldo >= 0 ? 'valor-positivo' : 'valor-negativo'">
-        Saldo: R${{ saldo.toFixed(2) }}
+        <span>Saldo: R${{ saldo.toFixed(2) }}</span> 
     </mat-card-content>
 </mat-card>
 
