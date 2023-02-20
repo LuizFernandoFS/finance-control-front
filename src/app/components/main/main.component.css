@@ -24,3 +24,11 @@
     margin: 5px;
     padding: 8px;
 }
+
+button {
+    display: flex;
+    width: 25vw;
+    align-items: center;
+    justify-content: center;
+    margin: 2px;
+}

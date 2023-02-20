@@ -12,6 +12,10 @@ import { HttpClientModule } from '@angular/common/http';
 import {MatTableModule} from '@angular/material/table';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
+import { CreateReceitaComponent } from './components/create-receita/create-receita.component';
+import {MatFormFieldModule} from '@angular/material/form-field';
+import { FormsModule } from '@angular/forms';
+import { CreateDespesaComponent } from './components/create-despesa/create-despesa.component';
 
 @NgModule({
   declarations: [
@@ -19,6 +23,8 @@ import {MatButtonModule} from '@angular/material/button';
     HeaderComponent,
     FooterComponent,
     MainComponent,
+    CreateReceitaComponent,
+    CreateDespesaComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,7 +34,9 @@ import {MatButtonModule} from '@angular/material/button';
     HttpClientModule,
     MatTableModule,
     MatCardModule,
-    MatButtonModule
+    MatButtonModule,
+    MatFormFieldModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

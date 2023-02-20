@@ -16,4 +16,10 @@ export class RegistroService {
     const url = `${this.baseUrl}/registros`;
     return this.http.get<Registro[]>(url);
   }
+
+  create(registro: Registro): Observable<Registro> {
+    const url = `${this.baseUrl}/registros`
+    return this.http.post<Registro>(url, registro);
+  }
+  
 }

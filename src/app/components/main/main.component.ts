@@ -1,5 +1,5 @@
-import { DatePipe } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { Registro } from 'src/app/services/registro';
 import { RegistroService } from 'src/app/services/registro.service';
 
@@ -14,7 +14,7 @@ export class MainComponent implements OnInit {
   displayedColumns: string[] = ['descricao', 'valor', 'dataRegistro']
   saldo: number = 0;
 
-  constructor(private service: RegistroService) { }
+  constructor(private service: RegistroService, private router: Router) { }
 
   ngOnInit(): void {
     this.findAll();
@@ -45,5 +45,13 @@ export class MainComponent implements OnInit {
     const dataInvertida = partes.reverse().join('/');
     console.log(dataInvertida);
     return dataInvertida;
+  }
+
+  addReceita(): void {
+    this.router.navigate(['registros/create/receita']);
+  }
+
+  addDespesa(): void {
+    this.router.navigate(['registros/create/despesa']);
   }
 }
