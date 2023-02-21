@@ -19,6 +19,11 @@
     <div class="mat-elevation-z8">
         <table class="table" mat-table [dataSource]="registros">
 
+            <ng-container matColumnDef="id">
+                <th mat-header-cell *matHeaderCellDef> Id </th>
+                <td mat-cell *matCellDef="let row"> {{ row.id }} </td>
+            </ng-container>
+
             <ng-container matColumnDef="descricao">
                 <th mat-header-cell *matHeaderCellDef> Descrição </th>
                 <td mat-cell *matCellDef="let row"> {{ row.descricao }} </td>
@@ -39,7 +44,20 @@
                 </td>
             </ng-container>
 
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <ng-container matColumnDef="acoes">
+                <th mat-header-cell *matHeaderCellDef> Ações </th>
+                <td mat-cell *matCellDef="let row">
+                    <button (click)="update(row.id)" class="btn-excluir" mat-raised-button color="basic">
+                        <i class="bi bi-pencil-square"></i>
+                    </button>
+
+                    <button (click)="delete(row.id)" class="btn-excluir" mat-raised-button color="warn">
+                        <i class="bi bi-trash3"></i>
+                    </button>
+                </td>
+            </ng-container>  
+
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>  
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
         </table>
     </div>

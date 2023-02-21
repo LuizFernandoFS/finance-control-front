@@ -1,0 +1,21 @@
+<form id="formUpdate">
+    <mat-form-field>
+
+        <h1>Deseja realmente atualizar este registro?</h1>
+
+        <label for="descricao">Descrição:</label>
+        <input [(ngModel)]="registro.descricao" [value]="registro.descricao" name="descricao" autocomplete="off">
+
+        <label for="valor">Valor R$:</label>
+        <input [(ngModel)]="registro.valor" [value]="registro.valor" name="valor" autocomplete="off">
+
+        <button (click)="update()" mat-raised-button color="primary">
+            <i class="bi bi-box-arrow-down"></i> Salvar
+        </button>
+
+        <button (click)="cancel()" mat-raised-button color="warn">
+            <i class="bi bi-x-lg"></i> Cancelar
+        </button>
+
+    </mat-form-field>
+</form>

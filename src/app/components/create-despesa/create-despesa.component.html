@@ -4,10 +4,10 @@
         <h1>Nova Despesa(-)</h1>
 
         <label for="descricao">Descrição:</label>
-        <input matInput [(ngModel)]="despesa.descricao" name="descricao" placeholder="Ex.: Troca Retrovisor do carro">
+        <input matInput [(ngModel)]="despesa.descricao" name="descricao" placeholder="Ex.: Troca Retrovisor do carro" autocomplete="off">
 
         <label for="valor">Valor R$:</label>
-        <input matInput [(ngModel)]="despesa.valor" name="valor" placeholder="Ex.: R$1500">
+        <input matInput [(ngModel)]="despesa.valor" name="valor" placeholder="Ex.: R$1500" autocomplete="off">
 
         <button (click)="create()" mat-raised-button color="primary">
             <i class="bi bi-download"></i> Salvar 

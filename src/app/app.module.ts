@@ -16,6 +16,8 @@ import { CreateReceitaComponent } from './components/create-receita/create-recei
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { FormsModule } from '@angular/forms';
 import { CreateDespesaComponent } from './components/create-despesa/create-despesa.component';
+import { DeleteComponent } from './components/delete/delete.component';
+import { UpdateComponent } from './components/update/update.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +27,8 @@ import { CreateDespesaComponent } from './components/create-despesa/create-despe
     MainComponent,
     CreateReceitaComponent,
     CreateDespesaComponent,
+    DeleteComponent,
+    UpdateComponent,
   ],
   imports: [
     BrowserModule,

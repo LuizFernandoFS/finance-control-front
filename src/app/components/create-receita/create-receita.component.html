@@ -4,10 +4,10 @@
         <h1>Nova Receita(+)</h1>
 
         <label for="descricao">Descrição:</label>
-        <input matInput [(ngModel)]="receita.descricao" name="descricao" placeholder="Ex.: Salário">
+        <input matInput [(ngModel)]="receita.descricao" name="descricao" placeholder="Ex.: Salário" autocomplete="off">
 
         <label for="valor">Valor R$:</label>
-        <input matInput [(ngModel)]="receita.valor" name="valor" placeholder="Ex.: R$1500">
+        <input matInput [(ngModel)]="receita.valor" name="valor" placeholder="Ex.: R$1500" autocomplete="off">
 
         <button (click)="create()" mat-raised-button color="primary">
             <i class="bi bi-download"></i> Salvar 

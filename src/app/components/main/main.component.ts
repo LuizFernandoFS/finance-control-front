@@ -11,7 +11,7 @@ import { RegistroService } from 'src/app/services/registro.service';
 export class MainComponent implements OnInit {
 
   registros: Registro[] = [];
-  displayedColumns: string[] = ['descricao', 'valor', 'dataRegistro']
+  displayedColumns: string[] = ['id', 'descricao', 'valor', 'dataRegistro', 'acoes']
   saldo: number = 0;
 
   constructor(private service: RegistroService, private router: Router) { }
@@ -40,10 +40,9 @@ export class MainComponent implements OnInit {
     this.saldo = receita - despesa;
   }
 
-  formatarData(data: string): string{
+  formatarData(data: string): string {
     const partes = data.split('-');
     const dataInvertida = partes.reverse().join('/');
-    console.log(dataInvertida);
     return dataInvertida;
   }
 
@@ -53,5 +52,13 @@ export class MainComponent implements OnInit {
 
   addDespesa(): void {
     this.router.navigate(['registros/create/despesa']);
+  }
+
+  delete(id: string): void {
+    this.router.navigate([`registros/delete/${id}`]);
+  }
+
+  update(id: string): void {
+    this.router.navigate([`registros/update/${id}`]);
   }
 }
