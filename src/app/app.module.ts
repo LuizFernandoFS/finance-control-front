@@ -9,15 +9,17 @@ import { MainComponent } from './components/main/main.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { HttpClientModule } from '@angular/common/http';
-import {MatTableModule} from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
-import {MatButtonModule} from '@angular/material/button';
+import { MatTableModule } from '@angular/material/table';
+import { MatCardModule } from '@angular/material/card';
+import { MatButtonModule } from '@angular/material/button';
 import { CreateReceitaComponent } from './components/create-receita/create-receita.component';
-import {MatFormFieldModule} from '@angular/material/form-field';
-import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CreateDespesaComponent } from './components/create-despesa/create-despesa.component';
 import { DeleteComponent } from './components/delete/delete.component';
 import { UpdateComponent } from './components/update/update.component';
+import { MatInputModule } from '@angular/material/input';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 
 @NgModule({
   declarations: [
@@ -41,8 +43,12 @@ import { UpdateComponent } from './components/update/update.component';
     MatButtonModule,
     MatFormFieldModule,
     FormsModule,
+    ReactiveFormsModule, 
+    MatInputModule,
+    MatSnackBarModule
   ],
-  providers: [],
+  exports:[ MatInputModule ],
+  providers: [ MatSnackBarModule ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

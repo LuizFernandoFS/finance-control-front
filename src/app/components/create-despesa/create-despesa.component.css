@@ -10,18 +10,19 @@
     padding: 4rem;
 }
 
+label {
+    width: 50vw;
+    font-weight: 500;
+    text-align: left;
+}
+
 h1 {
     text-align: center;
     font-weight: 600;
 }
 
-mat-form-field {
-    width: 49vw;
-    font-weight: 600;
-}
-
 input {
-    width: 49vw;
+    width: 50vw;
     font-size: 16px;
     padding: 10px;
     border: 1px solid #b4b4b4;
@@ -31,6 +32,17 @@ input {
 
 button {
     text-align: center;
-    width: 50.5vw;
+    width: 52vw;
     margin: 2px;
+}
+
+.validationError{
+    color: red;
+    margin-top: 0;
+    display: flex;
+    justify-content: right;
+    align-items: flex-start;
+    width: 51vw;
+    font-size: 12px;
+    font-weight: 500;
 }

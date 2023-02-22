@@ -1,21 +1,19 @@
 <form id="formDelete">
-    <mat-form-field>
 
-        <h1>Deseja realmente excluir este registro?</h1>
+    <h1>Deseja realmente excluir este registro?</h1>
 
-        <label for="descricao">Descrição:</label>
-        <input [value]="registro.descricao" name="descricao" [readOnly]="true">
+    <label for="descricao">Descrição:</label>
+    <input [value]="registro.descricao" name="descricao" [readOnly]="true">
 
-        <label for="valor">Valor R$:</label>
-        <input [value]="registro.valor" name="valor" [readOnly]="true">
+    <label for="valor">Valor R$:</label>
+    <input [value]="registro.valor" name="valor" [readOnly]="true">
 
-        <button (click)="delete()" mat-raised-button color="primary">
-            <i class="bi bi-trash"></i> Excluir 
-        </button>
+    <button (click)="delete()" mat-raised-button color="primary">
+        <i class="bi bi-trash"></i> Excluir
+    </button>
 
-        <button (click)="cancel()" mat-raised-button color="warn">
-            <i class="bi bi-x-lg"></i> Cancelar
-        </button>
+    <button (click)="cancel()" mat-raised-button color="warn">
+        <i class="bi bi-x-lg"></i> Cancelar
+    </button>
 
-    </mat-form-field>
 </form>

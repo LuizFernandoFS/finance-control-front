@@ -1,21 +1,34 @@
-<form id="formAddDespesa">
-    <mat-form-field>
+<form id="formAddDespesa" [formGroup]="fGroup">
+    <h1>Nova Despesa(-)</h1>
 
-        <h1>Nova Despesa(-)</h1>
+    <label for="descricao">Descrição:</label>
+    <input formControlName="descricao" placeholder="Ex.: Troca Retrovisor do carro"
+        autocomplete="off">
+    <div class="validationError" *ngIf="fGroup.controls['descricao'].errors && !fGroup.pristine">
+        <span *ngIf="fGroup.controls['descricao'].errors['required']">
+            Informe o campo Descrição!
+        </span>
+        <span *ngIf="fGroup.controls['descricao'].errors['minlength']">
+            O campo Descrição deve ter no mínimo 3 caracteres!
+        </span>
+        <span *ngIf="fGroup.controls['descricao'].errors['maxlength']">
+            O campo Descrição deve ter no máximo 200 caracteres!
+        </span>
+    </div>
 
-        <label for="descricao">Descrição:</label>
-        <input matInput [(ngModel)]="despesa.descricao" name="descricao" placeholder="Ex.: Troca Retrovisor do carro" autocomplete="off">
+    <label for="valor">Valor R$:</label>
+    <input type="number" formControlName="valor" placeholder="Ex.: R$300" autocomplete="off">
+    <div class="validationError" *ngIf="fGroup.controls['valor'].errors">
+        <span *ngIf="fGroup.controls['valor'].errors['required']">
+            Informe o campo Valor R$!
+        </span>
+    </div>
 
-        <label for="valor">Valor R$:</label>
-        <input matInput [(ngModel)]="despesa.valor" name="valor" placeholder="Ex.: R$1500" autocomplete="off">
+    <button (click)="create()" mat-raised-button color="primary" [disabled]="!fGroup.valid">
+        <i class="bi bi-download"></i> Salvar
+    </button>
 
-        <button (click)="create()" mat-raised-button color="primary">
-            <i class="bi bi-download"></i> Salvar 
-        </button>
-
-        <button (click)="cancel()" mat-raised-button color="warn">
-            <i class="bi bi-x-lg"></i> Cancelar
-        </button>
-
-    </mat-form-field>
+    <button (click)="cancel()" mat-raised-button color="warn">
+        <i class="bi bi-x-lg"></i> Cancelar
+    </button>
 </form>
