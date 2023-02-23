@@ -1,5 +1,6 @@
 /* Estilo para o formulário de adição de receita */
-*, h1 {
+*,
+h1 {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -36,7 +37,7 @@ button {
     margin: 2px;
 }
 
-.validationError{
+.validationError {
     color: red;
     margin-top: 0;
     display: flex;
@@ -46,3 +47,4 @@ button {
     font-size: 12px;
     font-weight: 500;
 }
+ 

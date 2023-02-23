@@ -14,6 +14,8 @@ export class MainComponent implements OnInit {
   displayedColumns: string[] = ['id', 'descricao', 'valor', 'dataRegistro', 'acoes']
   saldo: number = 0;
 
+  registrosFiltrados: Registro[] = [];
+
   constructor(private service: RegistroService, private router: Router) { }
 
   ngOnInit(): void {
@@ -44,6 +46,21 @@ export class MainComponent implements OnInit {
     const partes = data.split('-');
     const dataInvertida = partes.reverse().join('/');
     return dataInvertida;
+  }
+
+  filtrarPorData(): void {
+    const dataInicial = (document.getElementById('dataInicial') as HTMLInputElement).value;
+    const dataFinal = (document.getElementById('dataFinal') as HTMLInputElement).value;
+
+    if (dataInicial && dataFinal) {
+      const registrosFiltrados = this.registros.filter(registro => {
+        const dataRegistro = new Date(registro.dataRegistro!);
+        return dataRegistro >= new Date(dataInicial) && dataRegistro <= new Date(dataFinal);
+      });
+
+      this.registros = registrosFiltrados;
+      this.calculaSaldo();
+    }
   }
 
   addReceita(): void {

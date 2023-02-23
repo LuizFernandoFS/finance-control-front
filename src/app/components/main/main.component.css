@@ -26,6 +26,21 @@ span {
     padding: 8px;
 }
 
+#painelFiltroData {
+    width: 10vw;
+    height: 20vh;
+    margin: 5px;
+    padding: 5px;
+    text-align: center;
+    font-weight: 600;
+}
+
+#painelFiltroData button {
+    width: 10vw;
+    height: 5vh;
+    justify-content: center;
+}
+
 button {
     display: flex;
     width: 25vw;
@@ -38,4 +53,9 @@ button {
     font-size: 15px;
     width: 10px;
     display: inline;
+}
+
+.paineis {
+    display: flex;
+    width: 100vw;
 }
